@@ -1,15 +1,21 @@
-import copy as c
-import random as r
-import os
+import copy as c #allows us to deep copy a list without having memory overlap
+import random as r #allows for the AI to make decisions randomly
+import os #Operational 
 import matplotlib.pyplot as plt
 
 
 def all_equal(list):
-    return len(set(list)) <= 1
+    """
+    Determines if all of the elements in list L are the same
+    """
+    return len(set(list)) <= 1 # set(list) returns a list of each item in the list only once.
 
 
 def convert_board_proper(string):
-    list_var = string.split(',')
+    """
+    Converts the board input from a string to a list
+    """
+    list_var = string.split(',') 
     for j in range(len(list_var)):
         list_var[j] = list_var[j].split('.')
 
